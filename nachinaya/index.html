@@ -1,0 +1,1351 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69958365-6"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-69958365-6');
+    </script>
+    <!-- Auto ads - Google -->
+    <script data-ad-client="ca-pub-3427355473051563" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="canonical" href="https://ru.markdown.net.br/nachinaya/">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="author" content="Robert Salles">
+    <meta name="description" content="Полное руководство Markdown™ для начинающих с лучшими практическими примерами использования самого популярного языка разметки в мире.">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ru.markdown.net.br/nachinaya/">
+    <meta property="og:title" content="Markdown® Введение: основные языковые концепции [быстро и легко]">
+    <meta property="og:description" content="Полное руководство Markdown™ для начинающих с лучшими практическими примерами использования самого популярного языка разметки в мире.">
+    <meta property="og:image" content="https://markdown.net.br/assets/img/markdown.jpg">
+
+    <title>Markdown® Введение: основные языковые концепции [быстро и легко]</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2196f3">
+    <meta name="msapplication-TileColor" content="#2196f3">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#2196f3">
+    <!-- CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.css" integrity="sha256-nOfkEPu/TzBvIxN8D/vW8weOUczzDbxRjgik/hA2hBI=" crossorigin="anonymous" />
+    <style type="text/css">
+    	.mv-40 {
+    		margin-top: 40px;
+    		margin-bottom: 40px;
+    	}
+
+    	img[src=""],
+    	img:not([src]) {
+    	  visibility: hidden;
+    	}
+
+    	.caption {
+    	    display: flex;
+    	    justify-content: center;
+    	    align-items: center;
+    	    margin: 10px 0;
+    	    color: hsl(0deg 0% 33%);
+    	    font-style: italic;
+    	    font-size: 75%;
+    	}
+
+    	picture {
+    		display: block;
+    		position: relative;
+    	}
+
+    	.cover-link {
+    		position: absolute;
+    		top: 0;
+    		bottom: 0;
+    		left: 0;
+    		right: 0;
+    	}
+    </style>
+  </head>
+  <body class="themes" cz-shortcut-listen="true">
+    <header>
+      <div class="container">
+  <a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger waves-effect waves-light circle">
+  <i class="material-icons">menu</i>
+  </a>
+</div>
+<ul id="nav-mobile" class="sidenav">
+  <li class="logo blue">
+    <a id="logo-container" href="/" class="brand-logo">
+    <img src="https://markdown.net.br/assets/img/markdown-logo-transparent.svg" height="100">
+    </a>
+  </li>
+  <li class="push-it-down"></li>
+  <li class="search white">
+    <div class="search-wrapper">
+      <input id="search" placeholder="Поиск"><i class="material-icons">search</i>
+      <div class="search-results"></div>
+    </div>
+  </li>
+  <li class="bold white">
+    <a href="/nachinaya/" class="waves-effect waves-blue"><i class="tiny material-icons">child_care</i>Вступление</a>
+  </li>
+  <li class="bold white">
+    <a href="/bazovyy-sintaksis/" class="waves-effect waves-blue"><i class="tiny material-icons">short_text</i>Базовый синтаксис</a>
+  </li>
+  <li class="bold white">
+    <a href="/rasshirennyy-sintaksis/" class="waves-effect waves-blue"><i class="tiny material-icons">format_align_left</i>Расширенный синтаксис</a>
+  </li>
+  <li class="bold white">
+    <a href="/kratkaya-spravka/" class="waves-effect waves-blue"><i class="tiny material-icons">help_outline</i>Краткий справочник</a>
+  </li>
+  <li class="bold white">
+    <a href="/programmnogo-obespecheniya/" class="waves-effect waves-blue"><i class="tiny material-icons">card_travel</i>Инструменты</a>
+  </li>
+</ul>
+    </header>
+    <main>
+      <div class="section" id="index-banner">
+        <div class="container">
+          <div class="row" style="margin-bottom: 0;">
+            <div class="col s12 m6 l7 offset-m1 offset-l1">
+              <h1>Введение в Markdown</h1>
+              <h4 class="light">Все, что вам нужно знать, чтобы начать свое путешествие с Markdown.</h4>
+              <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+                  <a itemprop="item" href="/">
+                      <span itemprop="name">Markdown</span></a>
+                  <meta itemprop="position" content="1" />
+                </li>
+                <li>
+<i class="fas fa-chevron-right chevron-separator"></i>
+</li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<span itemprop="name">Введение в Markdown</span>
+<meta itemprop="position" content="2" />
+</li>
+
+              </ol>
+            </div>
+            <div class="col s12 m5 l4 mt-s-30" align="center">
+            	<!-- square-fixed-300-250 -->
+            	<ins class="adsbygoogle"
+            	     style="display:inline-block;width:300px;height:250px"
+            	     data-ad-client="ca-pub-3427355473051563"
+            	     data-ad-slot="1035906960"></ins>
+            	<script>
+            	     (adsbygoogle = window.adsbygoogle || []).push({});
+            	</script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <!--  Outer row  -->
+        <div class="row">
+          <div class="section col s12 m8 offset-m1 xl7 offset-xl1">
+            <div class="row scrollspy">
+  <div class="col s12">
+    <h2 id="markdown">Что такое Markdown?</h2>
+
+    <p>Markdown - это язык разметки, используемый для форматирования документов всех типов, созданный <a href="https://daringfireball.net/projects/markdown/" target="_blank">Джоном Грубером</a> и Аароном Шварцем в 2004 году, сегодня это один из самых популярных языков среди программистов.</p>
+
+    <p>Согласно Википедии:</p>
+
+    <div class="image-container">
+    	<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-wikipedia_w615.webp 615w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w556.webp 556w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w497.webp 497w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w438.webp 438w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w379.webp 379w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w320.webp 320w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w261.webp 261w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w202.webp 202w"
+		         sizes="(max-width: 615px) 100vw, 615px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown Tutorial - Определение Markdown из Википедии"
+		        	title="Markdown Tutorial - Определение Markdown из Википедии"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-wikipedia_w615.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-wikipedia_w615.png 615w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w556.png 556w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w497.png 497w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w438.png 438w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w379.png 379w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w320.png 320w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w261.png 261w,
+https://markdown.net.br/assets/img/intro/markdown-wikipedia_w202.png 202w"
+		         	sizes="(max-width: 615px) 100vw, 615px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-wikipedia_w615.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Определение Markdown из Википедии</span>
+		</figcaption>
+		</figure>
+    </div>
+
+    <blockquote><strong>ПРИМЕЧАНИЕ</strong>: язык разметки - это язык, который использует <i> tags </i> или символы для применения стилизации к содержимому. Самыми популярными языками разметки в мире являются HTML, XML и Markdown.</blockquote>
+
+    <p>На изображении ниже вы можете увидеть файл, отформатированный с помощью Markdown в текстовом редакторе <a href="https://www.sublimetext.com/" target="_blank">Sublime Text</a>.</p>
+
+    <div class="image-container">
+    	<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-sublime-text_w1280.webp 1280w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w1126.webp 1126w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w972.webp 972w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w818.webp 818w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w510.webp 510w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w356.webp 356w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown Tutorial - Пример форматирования Markdown на Sublime Text"
+		        	title="Markdown Tutorial - Пример форматирования Markdown на Sublime Text"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-sublime-text_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-sublime-text_w1280.png 1280w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w1126.png 1126w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w972.png 972w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w818.png 818w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w664.png 664w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w510.png 510w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w356.png 356w,
+https://markdown.net.br/assets/img/intro/markdown-sublime-text_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-sublime-text_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Пример форматирования Markdown на Sublime Text</span>
+		</figcaption>
+		</figure>
+    </div>
+
+    <p>Файл Markdown или MD состоит из простого текста, прост для понимания и не содержит всей этой разметки HTML, загрязняющей содержимое.</p>
+
+    <blockquote><strong>ПРИМЕЧАНИЕ</strong>: MD - это сокращение от Markdown.</blockquote>
+
+    <p>С помощью Markdown вы можете добавить к документу форматирование с помощью разметки символов.</p>
+
+    <p>Важно отметить, что формат Markdown отличается от формата, используемого некоторыми редакторами <i> WYSIWYG </i>.</p>
+
+    <blockquote><strong>ПРИМЕЧАНИЕ</strong>: WYSIWYG - это сокращение от <i> What You See Is What You Get </i>. В основном форматирование контента происходит в реальном времени, то есть видно сразу. Чтобы узнать больше, вы можете обратиться к этой <a href="https://en.wikipedia.org/wiki/WYSIWYG" target="_blank">статье Википедии</a>.</blockquote>
+
+    <p>Например, в Microsoft Word, который является редактором WYSIWYG, форматирование текста происходит при выборе определенного содержимого и нажатии определенной кнопки, комбинации клавиш или некоторого пункта меню.</p>
+
+    <div class="image-container">
+    	<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w488.webp 488w,
+https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w416.webp 416w,
+https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w344.webp 344w,
+https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w272.webp 272w,
+https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w200.webp 200w"
+		         sizes="(max-width: 488px) 100vw, 488px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Учебник Markdown - окно Microsoft Word ​​WYSIWYG"
+		        	title="Учебник Markdown - окно Microsoft Word ​​WYSIWYG"
+		         	src="https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w488.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w488.png 488w,
+https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w416.png 416w,
+https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w344.png 344w,
+https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w272.png 272w,
+https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w200.png 200w"
+		         	sizes="(max-width: 488px) 100vw, 488px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/microsoft-word-wysiwyg_w488.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Окно Microsoft Word ​​- WYSIWYG</span>
+		</figcaption>
+		</figure>
+    </div>
+
+    <p>В Markdown форматирование применяется с использованием таких символов, как знак фунта <code class="lang-text">#</code>, звездочка <code class="lang-text">*</code> и подчеркивание <code class="lang-text">_</code>.</p>
+
+    <p>Эти символы используются процессором Markdown, чтобы узнать, какие слова / фразы следует форматировать при преобразовании файла в HTML.</p>
+
+    <p class="mv-40">
+	    <ins class="adsbygoogle"
+	         style="display:block; text-align:center;"
+	         data-ad-layout="in-article"
+	         data-ad-format="fluid"
+	         data-ad-client="ca-pub-3427355473051563"
+	         data-ad-slot="3854885260"></ins>
+	    <script>
+	         (adsbygoogle = window.adsbygoogle || []).push({});
+	    </script>
+    </p>
+
+    <p>Например, <code class="lang-markdown">** Я хочу, чтобы этот текст был полужирным **</code> и <code class="lang-markdown">_этот текст курсивом_</code>.</p>
+
+	<p>Слишком запутались? Немного упростим.</p>
+
+	<p>Когда вы окружаете контент двумя звездочками <code class="lang-text">**</code>, вы выделяете его жирным шрифтом, во втором примере мы используем подчеркивание <code class="lang-text">_</code>, чтобы применить курсив.</p>
+
+	<h2 id="markdown-edit-file">Как редактировать файл Markdown</h2>
+
+	<p>Файл Markdown - это не что иное, как <code class="lang-text">текст</code>, поэтому для этой задачи достаточно любого простого текстового редактора.</p>
+
+	<div class="image-container">
+		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-notepad_w1280.webp 1280w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w1126.webp 1126w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w972.webp 972w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w818.webp 818w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w510.webp 510w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w356.webp 356w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown Tutorial - Редактирование документа Markdown на Notepad"
+		        	title="Markdown Tutorial - Редактирование документа Markdown на Notepad"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-notepad_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-notepad_w1280.png 1280w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w1126.png 1126w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w972.png 972w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w818.png 818w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w664.png 664w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w510.png 510w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w356.png 356w,
+https://markdown.net.br/assets/img/intro/markdown-notepad_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-notepad_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Редактирование документа Markdown в Notepad.</span>
+		</figcaption>
+		</figure>
+	</div>
+
+	<p>Однако интересно принять во внимание:</p>
+	<ul class="collection">
+	  <li class="collection-item green lighten-5">Редактор, позволяющий конвертировать наш документ Markdown в другой формат.</li>
+	  <li class="collection-item yellow lighten-5">Редактор, который может выделять синтаксис Markdown.</li>
+	  <li class="collection-item">
+		<ins class="adsbygoogle"
+		     style="display:block; text-align:center;"
+		     data-ad-layout="in-article"
+		     data-ad-format="fluid"
+		     data-ad-client="ca-pub-3427355473051563"
+		     data-ad-slot="3854885260"></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	  </li>
+	  <li class="collection-item green lighten-5">Редактор, показывающий преобразование в HTML в реальном времени</li>
+	</ul>
+
+	<p>Хорошая новость в том, что:</p>
+	<ul class="collection">
+	  <li class="collection-item blue lighten-5">Существует несколько приложений Markdown для различных операционных систем, включая Windows, Linux, Android и даже iOS.</li>
+	  <li class="collection-item orange lighten-5">Когда дело доходит до Web, все становится еще лучше, несколько сайтов предлагают бесплатные приложения Markdown для редактирования ваших документов online, и, что лучше всего, многие имеют конвертер в реальном времени, то есть, когда вы вводите приложение, уже конвертирующееся в HTML .</li>
+	</ul>
+
+	<div class="image-container">
+		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-text-editors_w1280.webp 1280w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w1126.webp 1126w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w972.webp 972w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w818.webp 818w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w510.webp 510w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w356.webp 356w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown Tutorial - текстовые редакторы Markdown"
+		        	title="Markdown Tutorial - текстовые редакторы Markdown"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-text-editors_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-text-editors_w1280.png 1280w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w1126.png 1126w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w972.png 972w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w818.png 818w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w664.png 664w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w510.png 510w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w356.png 356w,
+https://markdown.net.br/assets/img/intro/markdown-text-editors_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-text-editors_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Параллельные текстовые редакторы: Notepad ++, Sublime Text & Visual Studio Code.</span>
+		</figcaption>
+		</figure>
+	</div>
+
+	<blockquote><strong>ПРИМЕЧАНИЕ</strong>: стоит помнить, что форматирование Markdown чрезвычайно простое, поэтому документ, отформатированный на этом языке, остается читаемым.</blockquote>
+
+    <h2 id="markdown-vs-wysiwyg">Markdown против WYSIWYG</h2>
+
+	<p>Если редактор WYSIWYG (который предлагает форматирование в реальном времени) чрезвычайно удобен, зачем мне использовать Markdown?</p>
+
+	<div class="image-container">
+		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w1280.webp 1280w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w1126.webp 1126w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w972.webp 972w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w818.webp 818w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w510.webp 510w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w356.webp 356w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Учебник Markdown - Markdown vs WYSIWYG Microsoft Word"
+		        	title="Учебник Markdown - Markdown vs WYSIWYG Microsoft Word"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w1280.png 1280w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w1126.png 1126w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w972.png 972w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w818.png 818w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w664.png 664w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w510.png 510w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w356.png 356w,
+https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-vs-wysiwyg_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Сравнение форматирования Markdown и форматирования WYSIWYG.</span>
+		</figcaption>
+		</figure>
+	</div>
+
+    <p>Если я использую редактор WYSIWYG, я могу нажать кнопку и получить желаемое форматирование, почему я собираюсь печатать документ с разметкой Markdown?</p>
+
+    <p>Давайте посмотрим на некоторые причины использования Markdown:</p>
+
+    <ul class="collection">
+		<li class="collection-item green lighten-5">Markdown можно использовать для создания практически любого типа документов, будь то веб-сайты, книги, презентации, e-mails, техническая документация и многое другое.</li>
+		<li class="collection-item yellow lighten-5">A portabilidade do Markdown é excepcional. Por ser um documento de texto simples, esse, pode ser editado em qualquer aplicativo de texto. Se contrastarmos com o Microsoft Word, o formato <code class="lang-text">docx</code> é proprietário e necessita de programa específico para ser aberto, o que não acontece com o <code class="lang-text">md</code>.
+		</li>
+		<li class="collection-item">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</li>
+		<li class="collection-item blue lighten-5">Вам это нравится?</li>
+		<li class="collection-item green lighten-5">Независимо от того, какую операционную систему вы используете, Windows, Mac или Android, Markdown совместим.</li>
+		<li class="collection-item yellow lighten-5">Сделайте свой документ доступным даже в случае катастрофы. Ваш любимый текстовый редактор больше не работает? Поддержка закончилась? Программа стала платной? Нет проблем, просто выберите любой другой текстовый редактор и продолжайте редактировать и получать доступ к своему документу, что чрезвычайно важно для таких файлов, как техническая документация, книги и TCC.</li>
+		<li class="collection-item blue lighten-5">Гигантское сообщество Markdown сделало его доступным на ряде веб-сайтов в качестве стандартного языка для форматирования сообщений. GitHub и Reddit - это примеры известных сайтов, использующих Markdown.</li>
+		<li class="collection-item">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</li>
+		<li class="collection-item green lighten-5">Большое количество людей уже используют Markdown, поэтому их отформатированные документы будут понимать все больше и больше людей.</li>
+  	</ul>
+
+
+  	<h2 id="markdown-practicing">Практика</h2>
+
+  	<p>Лучший способ учиться - это практиковаться!</p>
+
+  	<p>Интересно, что для изучения синтаксиса языка у вас есть редактор Markdown.</p>
+
+  	<p>Самый быстрый способ начать практиковать Markdown - использовать редакторы online. С приложениями Web вам не нужно ничего скачивать, просто зайдите на сайт и начните редактировать файл <code class="lang-text">md</code>.</p>
+
+  	<div class="image-container">
+  		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-online-editors_w1280.webp 1280w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w1126.webp 1126w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w972.webp 972w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w818.webp 818w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w510.webp 510w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w356.webp 356w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown Tutorial - Редакторы online, StackEdit, Dillinger и Editor.md"
+		        	title="Markdown Tutorial - Редакторы online, StackEdit, Dillinger и Editor.md"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-online-editors_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-online-editors_w1280.png 1280w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w1126.png 1126w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w972.png 972w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w818.png 818w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w664.png 664w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w510.png 510w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w356.png 356w,
+https://markdown.net.br/assets/img/intro/markdown-online-editors_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-online-editors_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Редакторы online, StackEdit, Dillinger и Editor.md</span>
+		</figcaption>
+		</figure>
+  	</div>
+
+  	<p><a href="https://stackedit.io/app" target="_blank">StackEdit</a>, <a href="https://dillinger.io/" target="_blank">Dillinger</a> и <a href="/editor/" target="_blank">Editor.md (Markeditor)</a> - хорошие варианты для начала.</p>
+
+  	<blockquote><strong>ПРИМЕЧАНИЕ</strong>: откройте один из редакторов online на другой вкладке браузера, чтобы обучить синтаксис Markdown в реальном времени.</blockquote>
+
+  	<h3 id="stackedit">StackEdit</h3>
+
+  	<p><a href="https://stackedit.io/app" target="_blank">StackEdit</a> - одно из наиболее полных приложений. В дополнение к редактору он также предоставляет конвертер в реальном времени, который отображает HTML на правой панели.</p>
+
+  	<div class="image-container">
+  		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/stackedit-interface_w1280.webp 1280w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w1126.webp 1126w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w972.webp 972w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w818.webp 818w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w510.webp 510w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w356.webp 356w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown Tutorial - интерфейс StackEdit"
+		        	title="Markdown Tutorial - интерфейс StackEdit"
+		         	src="https://markdown.net.br/assets/img/intro/stackedit-interface_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/stackedit-interface_w1280.png 1280w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w1126.png 1126w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w972.png 972w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w818.png 818w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w664.png 664w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w510.png 510w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w356.png 356w,
+https://markdown.net.br/assets/img/intro/stackedit-interface_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/stackedit-interface_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Интерфейс редактора Web Markdown StackEdit</span>
+		</figcaption>
+		</figure>
+  	</div>
+
+  	<p>См. Дополнительную информацию о <a href="/programmnogo-obespecheniya/stackedit/" target="_blank">StackEdit</a> в разделе инструментов.</p>
+
+  	<h3 id="dillinger">Dillinger</h3>
+
+  	<p><a href="https://dillinger.io/" target="_blank">Dillinger</a> имеет очень простой интерфейс, но предлагает несколько вариантов редактирования документа Markdown. Помимо преобразования в реальном времени, вы также можете экспортировать файл в форматы HTML и PDF.</p>
+
+  	<div class="image-container">
+  		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/dillinger-interface_w1280.webp 1280w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w1126.webp 1126w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w972.webp 972w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w818.webp 818w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w510.webp 510w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w356.webp 356w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Учебник Markdown - интерфейс Dillinger Web"
+		        	title="Учебник Markdown - интерфейс Dillinger Web"
+		         	src="https://markdown.net.br/assets/img/intro/dillinger-interface_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/dillinger-interface_w1280.png 1280w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w1126.png 1126w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w972.png 972w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w818.png 818w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w664.png 664w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w510.png 510w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w356.png 356w,
+https://markdown.net.br/assets/img/intro/dillinger-interface_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/dillinger-interface_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Интерфейс редактора Web Markdown Dillinger</span>
+		</figcaption>
+		</figure>
+  	</div>
+
+  	<p>Для получения дополнительной информации о Dillinger [a1] нажмите здесь.</p>
+
+  	<h3 id="editor-md">Editor.md (Markeditor)</h3>
+
+  	<p><a href="/editor/" target="_blank">Editor.md</a> - это инструмент с открытым исходным кодом, в нем есть преобразователь MD для HTML в реальном времени и кнопки, которые позволяют создавать элемент Markdown одним щелчком мыши.</p>
+
+  	<div class="image-container">
+  		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/editor-md-interface_w1268.webp 1268w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w1115.webp 1115w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w962.webp 962w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w809.webp 809w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w656.webp 656w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w503.webp 503w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w350.webp 350w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w197.webp 197w"
+		         sizes="(max-width: 656px) 100vw, 656px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Учебник Markdown - интерфейс Editor.md Web"
+		        	title="Учебник Markdown - интерфейс Editor.md Web"
+		         	src="https://markdown.net.br/assets/img/intro/editor-md-interface_w1268.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/editor-md-interface_w1268.png 1268w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w1115.png 1115w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w962.png 962w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w809.png 809w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w656.png 656w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w503.png 503w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w350.png 350w,
+https://markdown.net.br/assets/img/intro/editor-md-interface_w197.png 197w"
+		         	sizes="(max-width: 656px) 100vw, 656px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/editor-md-interface_w1268.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Интерфейс редактора Web Markdown Editor.md</span>
+		</figcaption>
+		</figure>
+  	</div>
+
+  	<h3 id="now-what">А потом?</h3>
+
+  	<p>Набравшись опыта, вы можете загрузить приложение для своей операционной системы и приступить к редактированию документов локально.</p>
+
+  	<p>В разделе "Инструменты a1]" вы найдете обширный список приложений с инструкциями по их использованию и информацией о совместимости с элементами Markdown.</p>
+
+  	<p class="mv-40">
+  	    <ins class="adsbygoogle"
+  	         style="display:block; text-align:center;"
+  	         data-ad-layout="in-article"
+  	         data-ad-format="fluid"
+  	         data-ad-client="ca-pub-3427355473051563"
+  	         data-ad-slot="3854885260"></ins>
+  	    <script>
+  	         (adsbygoogle = window.adsbygoogle || []).push({});
+  	    </script>
+  	</p>
+
+  	<p>Что ж, теперь, когда у вас есть редактор для практики Markdown, давайте разберемся, как работает преобразование из одного формата в другой.</p>
+
+
+  	<h2 id="markdown-convert-file">Как конвертировать файл Markdown</h2>
+
+  	<p>Давайте разберемся с процедурой, используемой приложениями Markdown для преобразования вашего файла <code class="lang-text">md</code> в другой формат, обычно HTML или PDF.</p>
+
+  	<div class="image-container">
+  		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w517.webp 517w,
+https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w438.webp 438w,
+https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w359.webp 359w,
+https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w280.webp 280w,
+https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w201.webp 201w"
+		         sizes="(max-width: 517px) 100vw, 517px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown Tutorial - Как преобразовать файл Markdown"
+		        	title="Markdown Tutorial - Как преобразовать файл Markdown"
+		         	src="https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w517.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w517.png 517w,
+https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w438.png 438w,
+https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w359.png 359w,
+https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w280.png 280w,
+https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w201.png 201w"
+		         	sizes="(max-width: 517px) 100vw, 517px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/how-to-convert-markdown-file_w517.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Как конвертировать файл Markdown</span>
+		</figcaption>
+		</figure>
+  	</div>
+
+  	<h3 id="markdown-simplicity">Простота Markdown</h3>
+
+  	<p>Как определить файл Markdown? По расширению, правильно? Обычно <code class="lang-text">md</code> или <code class="lang-text">markdown</code>.</p>
+
+  	<div class="image-container">
+  		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-file-extensions_w1052.webp 1052w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w930.webp 930w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w808.webp 808w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w686.webp 686w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w564.webp 564w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w442.webp 442w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w320.webp 320w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w198.webp 198w"
+		         sizes="(max-width: 686px) 100vw, 686px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown Tutorial - расширения файлов Markdown"
+		        	title="Markdown Tutorial - расширения файлов Markdown"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-file-extensions_w1052.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-file-extensions_w1052.png 1052w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w930.png 930w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w808.png 808w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w686.png 686w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w564.png 564w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w442.png 442w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w320.png 320w,
+https://markdown.net.br/assets/img/intro/markdown-file-extensions_w198.png 198w"
+		         	sizes="(max-width: 686px) 100vw, 686px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-file-extensions_w1052.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Расширения файлов Markdown</span>
+		</figcaption>
+		</figure>
+  	</div>
+
+  	<p>Файл Markdown представляет собой простой текст, не имеет форматирования, не является зашифрованным и, тем более, скомпилированным.</p>
+
+  	<blockquote><strong>ПРИМЕЧАНИЕ</strong>: Эта простота позволяет программам анализировать ваш текст на предмет символов, которые идентифицируют элементы Markdown.</blockquote>
+
+  	<p>Несколько приложений Markdown, помимо редактора, также имеют встроенный конвертер. Конвертер отвечает за перевод синтаксиса Markdown в другой формат.</p>
+
+  	<div class="image-container">
+  		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-html-pdf_w737.webp 737w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w660.webp 660w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w583.webp 583w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w506.webp 506w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w429.webp 429w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w352.webp 352w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w275.webp 275w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w198.webp 198w"
+		         sizes="(max-width: 737px) 100vw, 737px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown Tutorial - Файлы, созданные из отформатированного Markdown"
+		        	title="Markdown Tutorial - Файлы, созданные из отформатированного Markdown"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-html-pdf_w737.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-html-pdf_w737.png 737w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w660.png 660w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w583.png 583w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w506.png 506w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w429.png 429w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w352.png 352w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w275.png 275w,
+https://markdown.net.br/assets/img/intro/markdown-html-pdf_w198.png 198w"
+		         	sizes="(max-width: 737px) 100vw, 737px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-html-pdf_w737.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Файлы, созданные из форматированного Markdown</span>
+		</figcaption>
+		</figure>
+  	</div>
+
+  	<h3 id="markdown-how-conversion-works">Как происходит преобразование</h3>
+
+  	<p>Конвертер Markdown использует Parser для сканирования своего содержимого на предмет маркировки, совместимой с Markdown; При нахождении совместимой разметки Parser проверяет, есть ли совпадение в выходном формате, например tag HTML, который производит такое же форматирование.</p>
+
+  	<p>Ниже вы можете увидеть примерную таблицу соответствия между маркером Markdown и tag HTML.</p>
+
+  	<div class="image-container">
+  		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w850.webp 850w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w757.webp 757w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w571.webp 571w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w478.webp 478w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w385.webp 385w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w292.webp 292w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w199.webp 199w"
+		         sizes="(max-width: 757px) 100vw, 757px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Учебник Markdown - сравнение синтаксиса Markdown с HTML - таблица"
+		        	title="Учебник Markdown - сравнение синтаксиса Markdown с HTML - таблица"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w850.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w850.png 850w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w757.png 757w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w664.png 664w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w571.png 571w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w478.png 478w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w385.png 385w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w292.png 292w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w199.png 199w"
+		         	sizes="(max-width: 757px) 100vw, 757px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-syntax-vs-html-syntax_w850.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Таблица сравнения синтаксиса Markdown и HTML.</span>
+		</figcaption>
+		</figure>
+  	</div>
+
+  	<p>Обратите внимание, что формат HTML является одним из наиболее часто используемых для преобразования Markdown. Ваш файл, преобразованный в HTML, можно просмотреть в любом браузере Web, таком как Google Chrome, Mozilla Firefox и Microsoft Edge.</p>
+
+  	<p>На изображении ниже вы можете увидеть упрощенную версию процесса конвертации.</p>
+
+  	<div class="image-container">
+  		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w500.webp 500w,
+https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w425.webp 425w,
+https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w350.webp 350w,
+https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w275.webp 275w,
+https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w200.webp 200w"
+		         sizes="(max-width: 500px) 100vw, 500px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown Tutorial - Процесс преобразования Markdown в HTML"
+		        	title="Markdown Tutorial - Процесс преобразования Markdown в HTML"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w500.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w500.png 500w,
+https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w425.png 425w,
+https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w350.png 350w,
+https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w275.png 275w,
+https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w200.png 200w"
+		         	sizes="(max-width: 500px) 100vw, 500px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-html-conversion-process_w500.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Простая схема создания крышки между Markdown и HTML.</span>
+		</figcaption>
+		</figure>
+  	</div>
+
+  	<blockquote><strong>ПРИМЕЧАНИЕ</strong>: важно отметить, что в более надежном приложении компоненты могут быть разделены, даже если они могут быть независимыми друг от друга. Редактор, конвертер, парсер и т. Д. Изображение выше - это просто простое представление о том, как происходит процедура.</blockquote>
+
+
+  	<p>Подведем итоги преобразования в четыре этапа.</p>
+    <ul class="collection">
+		<li class="collection-item green lighten-5">Сначала мы должны создать файл Markdown, для этого мы добавляем расширение <code class="lang-text">md</code> или <code class="lang-text">markdown</code> при сохранении документа. Во время редактирования подойдет любой текстовый редактор.</li>
+		<li class="collection-item yellow lighten-5">Затем мы загружаем файл в какое-нибудь приложение Markdown.</li>
+		<li class="collection">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</li>
+		<li class="collection-item blue lighten-5">Пришло время преобразовать в другой формат, в нашем случае HTML. На этом этапе необходимо приложение, посвященное Markdown.</li>
+		<li class="collection-item orange lighten-5">Посмотреть результат конвертации. Если это HTML, просто откройте файл в браузере.</li>
+	</ul>
+
+  	<p>Некоторые моменты следует выделить</p>
+
+    <ul class="collection">
+		<li class="collection-item green lighten-5">Эта процедура может отличаться в зависимости от того, где вы редактируете файл Markdown.</li>
+		<li class="collection-item yellow lighten-5">Когда мы говорим о простом редактировании, то есть с использованием любого универсального редактора, эти шаги более очевидны.</li>
+		<li class="collection-item orange lighten-5">В случае таких издателей online, как Dillinger, StackEdit и Editor.md, этапы 2, 3 и 4 объединяются непосредственно в графическом интерфейсе этих приложений.</li>
+	</ul>
+
+	<h2 id="markdown-usage">Использование Markdown</h2>
+
+	<p>Создание контента для Web - самый популярный способ использования Markdown. Не только при создании страниц HTML, но также при создании и редактировании сообщений всех видов, от создания простых комментариев до разработки технической документации.</p>
+
+	<div class="image-container">
+		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/reddit-markdown-post_w806.webp 806w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w719.webp 719w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w632.webp 632w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w545.webp 545w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w458.webp 458w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w371.webp 371w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w284.webp 284w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w197.webp 197w"
+		         sizes="(max-width: 719px) 100vw, 719px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown Tutorial - Публикация на Reddit с использованием Markdown"
+		        	title="Markdown Tutorial - Публикация на Reddit с использованием Markdown"
+		         	src="https://markdown.net.br/assets/img/intro/reddit-markdown-post_w806.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/reddit-markdown-post_w806.png 806w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w719.png 719w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w632.png 632w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w545.png 545w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w458.png 458w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w371.png 371w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w284.png 284w,
+https://markdown.net.br/assets/img/intro/reddit-markdown-post_w197.png 197w"
+		         	sizes="(max-width: 719px) 100vw, 719px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/reddit-markdown-post_w806.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Публикация в Reddit с помощью Markdown</span>
+		</figcaption>
+		</figure>
+	</div>
+
+	<p>Вы также можете форматировать списки задач, сообщения e-mails, списки покупок и многое другое.</p>
+
+	<p>Ниже вы можете увидеть несколько примеров документов, которые можно создать с помощью Markdown.</p>
+
+	<h3 id="markdown-websites">Сайты</h3>
+
+	<p>Джон Грубер и Аарон Шварц разработали Markdown, думая о Internet, поэтому создание контента для Web стало одной из самых привлекательных сторон языка.</p>
+
+	<p>Многие приложения, совместимые с Markdown, уже автоматически конвертируют свое содержимое в HTML.</p>
+
+	<div class="image-container">
+		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w1280.webp 1280w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w1126.webp 1126w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w972.webp 972w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w818.webp 818w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w510.webp 510w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w356.webp 356w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown Tutorial - Автоматическое преобразование из Markdown в HTML online"
+		        	title="Markdown Tutorial - Автоматическое преобразование из Markdown в HTML online"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w1280.png 1280w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w1126.png 1126w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w972.png 972w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w818.png 818w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w664.png 664w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w510.png 510w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w356.png 356w,
+https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-to-html-real-time_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Автоматическое преобразование из Markdown в HTML</span>
+		</figcaption>
+		</figure>
+	</div>
+
+	<p>Вы можете создавать полные веб-сайты, используя в качестве основы форматирование Markdown. Если это то, что вы хотите сделать, вам могут помочь такие инструменты, как <a href="/programmnogo-obespecheniya/jekyll/" target="_blank">Jekyll</a> и <a href="/programmnogo-obespecheniya/mkdocs/" target="_blank">MkDocs</a>.</p>
+
+	<p>Jekyll и MkDocs - это инструменты, которые создают статические веб-сайты из документов Markdown. Знайте, что при создании веб-сайтов интересно, что вы как минимум знакомы с HTML, CSS и даже с управлением версиями файлов с помощью Git.</p>
+
+    <p class="mv-40">
+	    <ins class="adsbygoogle"
+	         style="display:block; text-align:center;"
+	         data-ad-layout="in-article"
+	         data-ad-format="fluid"
+	         data-ad-client="ca-pub-3427355473051563"
+	         data-ad-slot="3854885260"></ins>
+	    <script>
+	         (adsbygoogle = window.adsbygoogle || []).push({});
+	    </script>
+    </p>
+
+	<p><a href="/programmnogo-obespecheniya/github-pages/" target="_blank">GitHub Pages</a> предоставляет бесплатный хостинг для вашего статического веб-сайта.</p>
+
+	<p>Если вам нужно что-то более надежное, например, менеджер контента, знаменитый CMS, взгляните на <a href="/programmnogo-obespecheniya/ghost/" target="_blank">Ghost</a>.</p>
+
+	<p>Ghost - это бесплатная платформа с открытым исходным кодом для bloggers. Инструмент также имеет встроенный редактор Markdown.</p>
+
+	<p>Вы пользуетесь WordPress? Сайты, размещенные на WordPress.com, уже поддерживают Markdown, но вы можете использовать plugin Jetpack для сайтов, находящихся на других серверах хостинга.</p>
+
+
+	<h3 id="markdown-formatting-text">Форматировать текст</h3>
+
+	<p>Простота Markdown обходится без всех ярких опций редактора WYSIWYG, таких как Microsoft Word, но при этом предлагает достаточно форматирования для редактирования ваших документов.</p>
+
+	<p>Язык поддерживает полужирный шрифт, курсив и зачеркивание, в дополнение к, конечно, спискам, заголовкам, blockquotes и многому другому.</p>
+
+	<div class="image-container">
+		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-syntax-output_w852.webp 852w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w759.webp 759w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w666.webp 666w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w573.webp 573w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w480.webp 480w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w387.webp 387w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w294.webp 294w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w201.webp 201w"
+		         sizes="(max-width: 759px) 100vw, 759px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown Tutorial - Форматирование жирным шрифтом, курсивом и зачеркиванием в Markdown"
+		        	title="Markdown Tutorial - Форматирование жирным шрифтом, курсивом и зачеркиванием в Markdown"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-syntax-output_w852.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-syntax-output_w852.png 852w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w759.png 759w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w666.png 666w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w573.png 573w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w480.png 480w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w387.png 387w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w294.png 294w,
+https://markdown.net.br/assets/img/intro/markdown-syntax-output_w201.png 201w"
+		         	sizes="(max-width: 759px) 100vw, 759px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-syntax-output_w852.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Форматирование полужирным шрифтом, курсивом и зачеркиванием в Markdown</span>
+		</figcaption>
+		</figure>
+	</div>
+
+	<p>Еще одним преимуществом форматирования документов с помощью Markdown является возможность преобразования их практически в любой другой формат текстового файла.</p>
+
+	<p>Ниже представлен список приложений для создания / редактирования документов Markdown:</p>
+
+    <ul class="collection">
+		<li class="collection-item">Windows: <a href="https://wereturtle.github.io/ghostwriter/" target="_blank">ghostwriter</a> или же <a href="https://markdownmonster.west-wind.com/" target="_blank">Markdown Monster</a></li>
+		<li class="collection-item">Linux: <a href="https://github.com/retext-project/retext" target="_blank">ReText</a> или же <a href="https://wereturtle.github.io/ghostwriter/" target="_blank">ghostwriter</a></li>
+		<li class="collection-item">Mac: <a href="/programmnogo-obespecheniya/macdown/" target="_blank">MacDown</a>, <a href="/programmnogo-obespecheniya/ia-writer/" target="_blank">iA Writer</a> или же <a href="https://marked2app.com/" target="_blank">Marked</a></li>
+		<li class="collection-item">Web: <a href="/programmnogo-obespecheniya/dillinger/" target="_blank">Dillinger</a> или же <a href="https://stackedit.io/app" target="_blank">StackEdit</a></li>
+		<li class="collection-item">iOS / Android: <a href="/programmnogo-obespecheniya/ia-writer/" target="_blank">iA Writer</a></li>
+	</ul>
+
+
+	<h3 id="markdown-note-taking">Примечания</h3>
+
+	<p>Markdown - идеальный язык для заметок.</p>
+
+	<p>Вот список приложений, совместимых с Markdown.</p>
+
+    <ul class="collection">
+		<li class="collection-item"><a href="/programmnogo-obespecheniya/notable/" target="_blank">Notable</a>: выделяется своей совместимостью с несколькими платформами.</li>
+		<li class="collection-item"><a href="/programmnogo-obespecheniya/bear/" target="_blank">Bear</a>: мы вошли на территорию Apple, Bear совместим с Mac и iOS, по умолчанию не использует Markdown, но вы можете активировать его. Bear очень похож на Evernote.</li>
+		<li class="collection-item">
+		    <ins class="adsbygoogle"
+		         style="display:block; text-align:center;"
+		         data-ad-layout="in-article"
+		         data-ad-format="fluid"
+		         data-ad-client="ca-pub-3427355473051563"
+		         data-ad-slot="3854885260"></ins>
+		    <script>
+		         (adsbygoogle = window.adsbygoogle || []).push({});
+		    </script>
+		</li>
+		<li class="collection-item"><a href="/programmnogo-obespecheniya/simplenote/" target="_blank">Simplenote</a>: это бесплатно, это просто и хранит заметки. Доступно на всех платформах.</li>
+		<li class="collection-item"><a href="/programmnogo-obespecheniya/boostnote/" target="_blank">Boostnote</a>: больше ориентирован на программистов, помимо наличия открытого исходного кода.</li>
+	</ul>
+
+	<p>А Evernote? OneNote? Кто-нибудь...?</p>
+
+	<p>Так что, это...</p>
+
+	<p>Что касается приложений для создания заметок, то <a href="https://evernote.com/" target="_blank">Evernote</a> и <a href="https://www.onenote.com/" target="_blank">OneNote</a>, без сомнения, являются самыми популярными. К сожалению, эти две программы по умолчанию не поддерживают Markdown.</p>
+
+	<p>В случае Evernote вы можете использовать <a href="/programmnogo-obespecheniya/markdown-here/" target="_blank">Markdown Here</a> или <a href="https://marxi.co/" target="_blank">Marxico</a>.</p>
+
+	<blockquote><strong>ПРИМЕЧАНИЕ</strong>: Markdown Here - это расширение для вашего браузера, которое позволяет вам создавать emails, используя синтаксис Markdown. Вы можете использовать это же расширение на сайте Evernote.</blockquote>
+
+	<h3 id="markdown-books">Книги</h3>
+
+	<p>Что вы имеете в виду при написании книг с помощью Markdown?</p>
+
+	<p>Правильно, такие службы, как <a href="https://leanpub.com/" target="_blank">Leanpub</a>, используют файлы Markdown в качестве основы, преобразование выполняется для EPUB, MOBI и PDF.</p>
+
+	<p>Не очень любите электронные книги?</p>
+
+	<p>С файлом созданной вами электронной книги вы можете загрузить его в другие службы, такие как <a href="https://kdp.amazon.com/" target="_blank">Kindle Direct Publishing</a>, и создавать физические копии.</p>
+
+
+	<h3 id="markdown-slide-presentations">Презентации slides</h3>
+
+	<p>Да, вы правильно прочитали, вы можете создавать презентации из slides, используя Markdown.</p>
+
+	<p><a href="https://remarkjs.com/" target="_blank">Remark</a>, <a href="https://jdan.github.io/cleaver/" target="_blank">Cleaver</a> и <a href="https://github.com/adamzap/landslide" target="_blank">Landslide</a> - это инструменты, которые генерируют презентации slides прямо в вашем браузере, все они используют файлы <code class="lang-text">md</code> в качестве основы.</p>
+
+	<p>Предпочитаете использовать приложения? В macOS вы можете ссылаться на <a href="https://marked2app.com/" target="_blank">Marked</a> или <a href="https://www.decksetapp.com/" target="_blank">Deckset</a>. В Windows мы можем преобразовать Markdown в slides, используя <a href="https://pandoc.org/" target="_blank">Pandoc</a>.</p>
+
+	<p>Создание презентаций с использованием разметки Markdown может показаться пустой тратой времени, однако, немного попрактиковавшись, вы обнаружите, что это намного проще и быстрее, чем использование таких инструментов, как <a href="https://www.microsoft.com/pt-br/microsoft-365/powerpoint" target="_blank">PowerPoint</a> или <a href="https://www.apple.com/br/keynote/" target="_blank">Keynote</a>.</p>
+
+	<h3 id="markdown-emails">E-mails</h3>
+
+	<p>Большинство провайдеров e-mail предоставляют редактор WYSIWYG, интегрированный в интерфейс, но давайте посмотрим правде в глаза, многие оставляют желать лучшего, с одной стороны, много сложностей, с другой - отсутствуют параметры форматирования.</p>
+
+	<div class="image-container">
+		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w973.webp 973w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w863.webp 863w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w753.webp 753w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w643.webp 643w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w533.webp 533w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w423.webp 423w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w313.webp 313w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w203.webp 203w"
+		         sizes="(max-width: 753px) 100vw, 753px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown Tutorial - интерфейс создания Gmail email"
+		        	title="Markdown Tutorial - интерфейс создания Gmail email"
+		         	src="https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w973.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w973.png 973w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w863.png 863w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w753.png 753w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w643.png 643w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w533.png 533w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w423.png 423w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w313.png 313w,
+https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w203.png 203w"
+		         	sizes="(max-width: 753px) 100vw, 753px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/gmail-email-wysiwyg_w973.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Интерфейс создания Gmail email</span>
+		</figcaption>
+		</figure>
+	</div>
+
+	<p>И сейчас?</p>
+
+	<p><a href="/programmnogo-obespecheniya/markdown-here/" target="_blank">Markdown Here</a> - решение для этих случаев. Расширение для вашего браузера, которое позволяет вам писать свой e-mails, используя форматирование Markdown.</p>
+
+	<p>Это бесплатно?</p>
+
+	<p>Да, Markdown Here бесплатен, имеет открытый исходный код и мгновенно конвертирует Markdown в HTML.</p>
+
+
+	<h3 id="markdown-technical-docs">Техническая документация</h3>
+
+	<p>Markdown и техническая документация идут рука об руку. Бесчисленные компании используют файлы <code class="lang-text">квугвтовзл</code> для хранения своей документации.</p>
+
+	<p><a href="https://github.com/" target="_blank">GitHub</a> перенесли свои документы на Markdown с помощью инструмента Jekyll. Кроме того, один из самых известных архивов в мире, README.md из GitHub, состоит из Markdown.</p>
+
+	<div class="image-container">
+		<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/github-docs_w1280.webp 1280w,
+https://markdown.net.br/assets/img/intro/github-docs_w1126.webp 1126w,
+https://markdown.net.br/assets/img/intro/github-docs_w972.webp 972w,
+https://markdown.net.br/assets/img/intro/github-docs_w818.webp 818w,
+https://markdown.net.br/assets/img/intro/github-docs_w664.webp 664w,
+https://markdown.net.br/assets/img/intro/github-docs_w510.webp 510w,
+https://markdown.net.br/assets/img/intro/github-docs_w356.webp 356w,
+https://markdown.net.br/assets/img/intro/github-docs_w202.webp 202w"
+		         sizes="(max-width: 664px) 100vw, 664px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Учебное пособие по Markdown - документация по GitHub"
+		        	title="Учебное пособие по Markdown - документация по GitHub"
+		         	src="https://markdown.net.br/assets/img/intro/github-docs_w1280.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/github-docs_w1280.png 1280w,
+https://markdown.net.br/assets/img/intro/github-docs_w1126.png 1126w,
+https://markdown.net.br/assets/img/intro/github-docs_w972.png 972w,
+https://markdown.net.br/assets/img/intro/github-docs_w818.png 818w,
+https://markdown.net.br/assets/img/intro/github-docs_w664.png 664w,
+https://markdown.net.br/assets/img/intro/github-docs_w510.png 510w,
+https://markdown.net.br/assets/img/intro/github-docs_w356.png 356w,
+https://markdown.net.br/assets/img/intro/github-docs_w202.png 202w"
+		         	sizes="(max-width: 664px) 100vw, 664px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/github-docs_w1280.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Документация GitHub</span>
+		</figcaption>
+		</figure>
+	</div>
+
+	<blockquote><strong>ПРИМЕЧАНИЕ</strong>: GitHub использует небольшой вариант Markdown, называемый GitHub-flavored Markdown.</blockquote>
+
+	<p>При создании технической документации вам могут помочь следующие инструменты:</p>
+
+    <ul class="collection">
+		<li class="collection-item"><a href="/programmnogo-obespecheniya/jekyll/" target="_blank">Jekyll</a>: Создает документацию из файлов Markdown, это выбор GitHub Pages.</li>
+		<li class="collection-item"><a href="/programmnogo-obespecheniya/mkdocs/" target="_blank">MkDocs</a>: Просто, быстро и удобно. Основа документации - файлы .md, в конфигурации используются файлы YAML.</li>
+		<li class="collection-item"><a href="/programmnogo-obespecheniya/docusaurus/" target="_blank">Docusaurus</a>: Генератор статических сайтов, один из лучших инструментов для создания документов. Docusaurus был разработан Facebook, поддерживает управление версиями, поиск документов и даже переводы.</li>
+		<li class="collection-item"><a href="https://readthedocs.org/" target="_blank">Read The Docs</a>: Создает сайты документации на основе файлов Markdown.</li>
+		<li class="collection-item"><a href="https://vuepress.vuejs.org/" target="_blank">VuePress</a>: По названию вы понимаете, что это как-то связано с Vue, так как VuePress - это генератор статических веб-сайтов, предназначенный для написания технической документации.</li>
+	</ul>
+
+    <h2 id="markdown-flavors">Ароматы Markdown</h2>
+
+    <p>Представьте себе все разные диалекты, существующие в одном языке, сленг, произношения, акценты. Даже носителям языка иногда бывает сложно понять некоторые вещи.</p>
+
+    <div class="image-container">
+    	<figure class="mh-0">
+		    <picture class="lazy-img unloaded image-center">
+		    	<data-src class="responsive-img lazy-img"
+		         srcset="https://markdown.net.br/assets/img/intro/markdown-flavors_w893.webp 893w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w794.webp 794w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w695.webp 695w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w596.webp 596w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w497.webp 497w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w398.webp 398w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w299.webp 299w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w200.webp 200w"
+		         sizes="(max-width: 695px) 100vw, 695px"
+		         type="image/webp"></data-src>
+		    	<data-img class="responsive-img lazy-img"
+		        	alt="Markdown Tutorial - Ароматы Markdown"
+		        	title="Markdown Tutorial - Ароматы Markdown"
+		         	src="https://markdown.net.br/assets/img/intro/markdown-flavors_w893.png"
+		         	srcset="https://markdown.net.br/assets/img/intro/markdown-flavors_w893.png 893w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w794.png 794w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w695.png 695w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w596.png 596w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w497.png 497w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w398.png 398w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w299.png 299w,
+https://markdown.net.br/assets/img/intro/markdown-flavors_w200.png 200w"
+		         	sizes="(max-width: 695px) 100vw, 695px"></data-img>
+		        <a href="https://markdown.net.br/assets/img/intro/markdown-flavors_w893.png" target="_blank" class="cover-link"></a>
+		    </picture>
+			<figcaption class="caption">
+		    <i class="tiny material-icons">photo</i>&nbsp;<span>Варианты синтаксиса Markdown</span>
+		</figcaption>
+		</figure>
+    </div>
+
+    <p>Что ж, как и в случае с языками, реализации Markdown в разных программах также могут отличаться, даже если разница незначительна, она все равно может вызвать путаницу.</p>
+
+    <p>Варианты Markdown называются Flavors, например, GitHub использует немного более надежную версию Markdown, называемую GitHub-flavored Markdown или GFM.</p>
+
+    <p>Некоторые приложения используют только <a href="/bazovyy-sintaksis/" target="_blank">базовый синтаксис</a>, другие используют комбинацию базового синтаксиса и <a href="/rasshirennyy-sintaksis/" target="_blank">расширенного синтаксиса</a>, и, наконец, есть приложения, которые время от времени реализуют элементы обоих.</p>
+
+    <p>Что делать?</p>
+
+    <p>Лучший способ понять приложение - обратиться к его документации. Вы также можете использовать старую добрую тактику проб и ошибок. См. Также наш список инструментов, в котором перечислены элементы Markdown, совместимые с каждым приложением.</p>
+
+    <p>В конце концов, лучший вариант - использовать программу, которая предлагает максимально возможную совместимость, например <a href="/programmnogo-obespecheniya/dillinger/" target="_blank">Dillinger</a> или <a href="/programmnogo-obespecheniya/stackedit/" target="_blank">StackEdit</a>.</p>
+
+    <p>Некоторые примеры ароматов Markdown: <a href="https://github.github.com/gfm/" target="_blank">GFM (GitHub-flavored Markdown)</a>; <a href="https://fletcherpenney.net/multimarkdown/" targer="_blank">MultiMarkdown</a>; <a href="https://michelf.ca/projects/php-markdown/extra/" target="_blank">Markdown Extra</a>, <a href="https://kramdown.gettalong.org/" target="_blank">Kramdown</a>.</p>
+
+    <h2 id="markdown-conclusion">Вывод</h2>
+
+    <p>В этой статье вы узнали об основных аспектах Markdown, о том, что вы можете с ним делать, и о различных его реализациях.</p>
+
+    <p>Следующим шагом является изучение <a href="/bazovyy-sintaksis/">основного синтаксиса</a> языка или, если вы уже уверены, обратитесь к разделу <a href="/programmnogo-obespecheniya/">tools</a>, чтобы начать использовать Markdown.</p>
+  </div> <!-- FIM DO CONTEÚDO PRINCIPAL -->
+</div>
+            <div class="col-12">
+  <ul class="collapsible">
+    <li class="active">
+      <div class="collapsible-header grey lighten-4"><i class="material-icons">share</i>доля</div>
+      <div class="collapsible-body">
+        <div class="collection">
+          <a href="#!" class="collection-item" data-sharer="twitter" data-title="Markdown® Введение: основные языковые концепции [быстро и легко]" data-hashtags="markdown" data-url="https://ru.markdown.net.br/nachinaya/">
+            <i class="fab fa-twitter color-twitter"></i>&nbsp;&nbsp;Поделиться в Твиттере
+          </a>
+          <a href="#!" class="collection-item" data-sharer="facebook" data-hashtag="markdown" data-url="https://ru.markdown.net.br/nachinaya/">
+            <i class="fab fa-facebook color-facebook"></i>&nbsp;&nbsp;Поделиться через фейсбук
+          </a>
+          <a href="#!" class="collection-item" data-sharer="linkedin" data-url="https://ru.markdown.net.br/nachinaya/">
+            <i class="fab fa-linkedin color-linkedin"></i>&nbsp;&nbsp;Поделиться в Linkedin
+          </a>
+          <a href="#!" class="collection-item" data-sharer="email" data-title="Markdown® Введение: основные языковые концепции [быстро и легко]" data-url="https://ru.markdown.net.br/nachinaya/" data-subject="Здравствуй! Хорошо? Мне очень легко следовать этому руководству по Markdown, посмотрите, когда сможете. Надеюсь, это будет полезно, увидимся позже." data-to="email@host.com">
+            <i class="fas fa-envelope color-email"></i>&nbsp;&nbsp;Поделиться по электронной почте
+          </a>
+          <a href="#!" class="collection-item" data-sharer="whatsapp" data-title="Markdown® Введение: основные языковые концепции [быстро и легко]" data-url="https://ru.markdown.net.br/nachinaya/">
+            <i class="fab fa-whatsapp color-whatsapp"></i>&nbsp;&nbsp;Поделиться через WhatsApp
+          </a>
+          <a href="#!" class="collection-item" data-sharer="telegram" data-title="Markdown® Введение: основные языковые концепции [быстро и легко]" data-url="https://ru.markdown.net.br/nachinaya/" data-to="(00) 99999-9999">
+            <i class="fab fa-telegram color-telegram"></i>&nbsp;&nbsp;Поделиться в Telegram
+          </a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+          </div>
+          <!-- Table of contents -->
+          <div class="col hide-on-small-only m3 xl3 offset-xl1">
+            <div class="toc-wrapper" id="sticky-navigator">
+            </div>
+          </div>
+          <!-- Table of contents -->
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer docs-footer">
+  <div class="container">
+    <div class="row" style="margin-bottom: 0;">
+      <div class="col s12 m10 offset-m1">
+        <div class="row">
+          <div class="col l4 s12" style="overflow: hidden;">
+            <a href="https://twitter.com/CodigoNetwork" class="twitter-follow-button" data-show-count="true" data-size="large" data-dnt="true">следить @CodigoNetwork</a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div>
+            &copy;&nbsp;<noscript>2020</noscript><script type="text/javascript">document.write(new Date().getFullYear());</script> <strong>Markdown</strong>, Все права защищены.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    <!--  Scripts-->
+    <script src="/assets/js/bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.js" integrity="sha256-1baFoczEXwdtWBiZ6gbu7W1kn6XfPgKY4LkQQYNHTkM=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-asciidoc.min.js" integrity="sha256-Z6qgXS53J00CrN9qHl3CxGqX2A3qs6HwGi96bnk2e4w=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-markdown.min.js" integrity="sha256-LVbOCHxYsNr9pF5KGdB2NphtO2FKM92SGFxRkWc9Ovg=" crossorigin="anonymous"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.youtube.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.picture.min.js"></script>
+    <!-- Lightbox das imagens -->
+    <script>
+      $(document).ready(function(){
+         $('.materialboxed').materialbox();
+
+         $('picture.lazy-img.unloaded, img.lazy-img, iframe.lazy-yt.unloaded').Lazy({
+             effect: 'fadeIn',
+             effectTime: 1000
+             // called after an element was successfully handled
+             // afterLoad: function(element) {
+             // // Remove a animação do loader da imagem
+             //     // element.height(element.closest('.img-lazy-container').find('.image-placeholder').height());
+
+             //     element.removeClass('unloaded');
+             // }
+         });
+       });
+      anchors.add("h2, h3, h5");
+      $('#sticky-navigator').stickyNavigator();
+    </script>
+    <!-- Twitter Button -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </body>
+</html>

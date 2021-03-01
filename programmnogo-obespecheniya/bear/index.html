@@ -1,0 +1,488 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69958365-6"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-69958365-6');
+    </script>
+    <!-- Auto ads - Google -->
+    <script data-ad-client="ca-pub-3427355473051563" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="canonical" href="https://ru.markdown.net.br/programmnogo-obespecheniya/bear/">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="author" content="Robert Salles">
+    <meta name="description" content="Полное руководство Markdown™ для начинающих с несколькими примерами использования самого простого в мире языка разметки.">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ru.markdown.net.br/programmnogo-obespecheniya/bear/">
+    <meta property="og:title" content="Bear® & Markdown™ - Полный справочник | Markdown">
+    <meta property="og:description" content="Полное руководство Markdown™ для начинающих с несколькими примерами использования самого простого в мире языка разметки.">
+    <meta property="og:image" content="https://markdown.net.br/assets/img/markdown.jpg">
+
+    <title>Bear® & Markdown™ - Полный справочник | Markdown</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2196f3">
+    <meta name="msapplication-TileColor" content="#2196f3">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#2196f3">
+    <!-- CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.css" integrity="sha256-nOfkEPu/TzBvIxN8D/vW8weOUczzDbxRjgik/hA2hBI=" crossorigin="anonymous" />
+    <style type="text/css">
+    	.mv-40 {
+    		margin-top: 40px;
+    		margin-bottom: 40px;
+    	}
+
+    	img[src=""],
+    	img:not([src]) {
+    	  visibility: hidden;
+    	}
+
+    	.caption {
+    	    display: flex;
+    	    justify-content: center;
+    	    align-items: center;
+    	    margin: 10px 0;
+    	    color: hsl(0deg 0% 33%);
+    	    font-style: italic;
+    	    font-size: 75%;
+    	}
+
+    	picture {
+    		display: block;
+    		position: relative;
+    	}
+
+    	.cover-link {
+    		position: absolute;
+    		top: 0;
+    		bottom: 0;
+    		left: 0;
+    		right: 0;
+    	}
+    </style>
+  </head>
+  <body class="themes" cz-shortcut-listen="true">
+    <header>
+      <div class="container">
+  <a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger waves-effect waves-light circle">
+  <i class="material-icons">menu</i>
+  </a>
+</div>
+<ul id="nav-mobile" class="sidenav">
+  <li class="logo blue">
+    <a id="logo-container" href="/" class="brand-logo">
+    <img src="https://markdown.net.br/assets/img/markdown-logo-transparent.svg" height="100">
+    </a>
+  </li>
+  <li class="push-it-down"></li>
+  <li class="search white">
+    <div class="search-wrapper">
+      <input id="search" placeholder="Поиск"><i class="material-icons">search</i>
+      <div class="search-results"></div>
+    </div>
+  </li>
+  <li class="bold white">
+    <a href="/nachinaya/" class="waves-effect waves-blue"><i class="tiny material-icons">child_care</i>Вступление</a>
+  </li>
+  <li class="bold white">
+    <a href="/bazovyy-sintaksis/" class="waves-effect waves-blue"><i class="tiny material-icons">short_text</i>Базовый синтаксис</a>
+  </li>
+  <li class="bold white">
+    <a href="/rasshirennyy-sintaksis/" class="waves-effect waves-blue"><i class="tiny material-icons">format_align_left</i>Расширенный синтаксис</a>
+  </li>
+  <li class="bold white">
+    <a href="/kratkaya-spravka/" class="waves-effect waves-blue"><i class="tiny material-icons">help_outline</i>Краткий справочник</a>
+  </li>
+  <li class="bold white">
+    <a href="/programmnogo-obespecheniya/" class="waves-effect waves-blue"><i class="tiny material-icons">card_travel</i>Инструменты</a>
+  </li>
+</ul>
+    </header>
+    <main>
+      <div class="section" id="index-banner">
+        <div class="container">
+          <div class="row" style="margin-bottom: 0;">
+            <div class="col s12 m6 l7 offset-m1 offset-l1">
+              <h1>Bear</h1>
+              <h4 class="light">Bear - это простое приложение для создания заметок для устройств macOS и iOS.</h4>
+              <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+                  <a itemprop="item" href="/">
+                      <span itemprop="name">Markdown</span></a>
+                  <meta itemprop="position" content="1" />
+                </li>
+                <li>
+<i class="fas fa-chevron-right chevron-separator"></i>
+</li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<a itemprop="item" href="/programmnogo-obespecheniya/">
+<span itemprop="name">Издатели Markdown</span>
+</a>
+<meta itemprop="position" content="2" />
+</li>
+<li>
+<i class="fas fa-chevron-right chevron-separator"></i>
+</li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<span itemprop="name">Bear</span>
+<meta itemprop="position" content="3" />
+</li>
+
+              </ol>
+            </div>
+            <div class="col s12 m5 l4 mt-s-30" align="center">
+            	<!-- square-fixed-300-250 -->
+            	<ins class="adsbygoogle"
+            	     style="display:inline-block;width:300px;height:250px"
+            	     data-ad-client="ca-pub-3427355473051563"
+            	     data-ad-slot="1035906960"></ins>
+            	<script>
+            	     (adsbygoogle = window.adsbygoogle || []).push({});
+            	</script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <!--  Outer row  -->
+        <div class="row">
+          <div class="section col s12 m8 offset-m1 xl7 offset-xl1">
+            <div class="row scrollspy">
+  <div class="col s12">
+    <div class="image-container mt-60">
+      <img src="https://markdown.net.br/assets/img/bear-window.png" class="materialboxed" alt="Окно приложения Bear с некоторыми командами Markdown!" title="Окно приложения Bear с некоторыми командами Markdown!">
+    </div>
+
+    <h2 id="intro">Вступление</h2>
+
+    <p>Bear - очень простое в использовании приложение, оно простое, гибкое и быстрое, а также отвечает основным требованиям для редактирования документов с помощью Markdown.</p>
+
+    <p>Bear позволяет использовать tags, синхронизацию файлов и преобразование документов.</p>
+
+    <p class="mv-40">
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-3427355473051563"
+             data-ad-slot="3854885260"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </p>
+
+    <p>Но пусть вас не обманывает его простота: с Bear вы можете создавать как простые документы, так и более сложные эссе.</p>
+
+    <p>Посетите официальный веб-сайт Bear , <a href="https://bear.app/" target="_blank">нажав здесь</a>.</p>
+
+    <h2 id="markdown-support">Использование Markdown в Bear</h2>
+
+    <p>Используйте меню настроек, чтобы включить поддержку Markdown в приложении.</p>
+
+    <p>В редакторе реального времени Bear отображает результат вашей разметки Markdown по мере того, как вы набираете документ.</p>
+
+    <p class="mv-40">
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-3427355473051563"
+             data-ad-slot="3854885260"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </p>
+
+    <p>Если вы только начинаете работать с Markdown, просмотр изменений в реальном времени поможет вам привыкнуть к языку.</p>
+
+    <h3 id="enabling-markdown">Включение поддержки Markdown</h3>
+
+    <p>Сначала откройте окно настроек <code class="lang-plaintext">Preferences</code>, перейдите на вкладку <code class="lang-plaintext">General</code> и выберите вариант <code class="lang-plaintext">Markdown compatibility mode</code>.</p>
+
+    <p>Вы должны сделать это, включив совместимость с Markdown для каждого экземпляра Bear на всех ваших устройствах.</p>
+
+    <p class="mv-40">
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-3427355473051563"
+             data-ad-slot="3854885260"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </p>
+
+
+    <h2 id="markdown-compatibility">Bear совместимость с Markdown</h2>
+
+    <p>Элементы, перечисленные в <a href="#table-1-1">Таблица 1.1</a>, совместимы с приложением Bear.</p>
+
+    <table class="responsive-table" id="table-1-1">
+      <thead>
+        <tr>
+          <th>Элемент</th>
+          <th>Поддерживать</th>
+          <th>Информация</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/bazovyy-sintaksis/#headings" target="_blank">Титулы</a></td>
+          <td class="yellow lighten-3">Частичное</td>
+          <td>Bear не поддерживает создание заголовков с использованием <a href="/bazovyy-sintaksis/#headings-alternative-syntax" target="_blank"s>альтернативного синтаксиса</a>.</td>
+        </tr>
+        <tr>
+          <td><a href="/bazovyy-sintaksis/#paragraphs" target="_blank">Абзацы</a></td>
+          <td class="green lighten-4">Да</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/bazovyy-sintaksis/#line-break" target="_blank">Разрывы строк</a></td>
+          <td class="yellow lighten-3">Частичное</td>
+          <td>Разрыв строки с использованием пробела справа от содержимого невозможен, однако с помощью клавиши <code class="lang-plaintext">Enter</code> вы можете вставить новую строку.</td>
+        </tr>
+        <tr>
+          <td><a href="/bazovyy-sintaksis/#bold" target="_blank">Смелый</a></td>
+          <td class="green lighten-4">Да</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/bazovyy-sintaksis/#italics" target="_blank">Курсив</a></td>
+          <td class="green lighten-4">Да</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/bazovyy-sintaksis/#blockquote" target="_blank">Blockquote</a></td>
+          <td class="yellow lighten-3">Частичное</td>
+          <td><a href="/bazovyy-sintaksis/#blockquote-nested" target="_blank">вложенные Blockquotes</a> не поддерживаются.</td>
+        </tr>
+        <tr>
+          <td><a href="/bazovyy-sintaksis/#lists-ordered" target="_blank">Упорядоченные списки</a></td>
+          <td class="green lighten-4">Да</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/bazovyy-sintaksis/#lists-unordered" target="_blank">Неупорядоченные списки</a></td>
+          <td class="green lighten-4">Да</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/bazovyy-sintaksis/#code" target="_blank">Код</a></td>
+          <td class="green lighten-4">Да</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/bazovyy-sintaksis/#horizontal-rule" target="_blank">Горизонтальные линии</a></td>
+          <td class="green lighten-4">Да</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/bazovyy-sintaksis/#links" target="_blank">Links</a></td>
+          <td class="green lighten-4">Да</td>
+          <td>Вы можете создать ссылку, поместив название заметки между двумя квадратными скобками (например, <code class="lang-plaintext">[[note-name]]</code>).</td>
+        </tr>
+        <tr>
+          <td><a href="/bazovyy-sintaksis/#images" target="_blank">Изображений</a></td>
+          <td class="red lighten-3">Нет</td>
+          <td>Синтаксис Markdown не поддерживается, но вы все равно можете перетаскивать изображения в аннотацию.</td>
+        </tr>
+        <tr>
+          <td><a href="/rasshirennyy-sintaksis/#markdown-tables" target="_blank">Столы</a></td>
+          <td class="red lighten-3">Нет</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/rasshirennyy-sintaksis/#fenced-code-block" target="_blank">Огороженные блоки кода</a></td>
+          <td class="green lighten-4">Да</td>
+          <td>Также поддерживается подсветка синтаксиса.</td>
+        </tr>
+        <tr>
+          <td><a href="/rasshirennyy-sintaksis/#markdown-footnotes" target="_blank">Сноски</a></td>
+          <td class="red lighten-3">Нет</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/rasshirennyy-sintaksis/#markdown-title-id" target="_blank">Идентификатор заголовка</a></td>
+          <td class="yellow lighten-3">Частичное</td>
+          <td>Создание идентификации заголовка в Bear происходит автоматически, персонализация пока невозможна.</td>
+        </tr>
+        <tr>
+          <td><a href="/rasshirennyy-sintaksis/#markdown-definition-lists" target="_blank">Списки определений</a></td>
+          <td class="red lighten-3">Нет</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/rasshirennyy-sintaksis/#markdown-strikethrough" target="_blank">Зачеркнутый</a></td>
+          <td class="green lighten-4">Да</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/rasshirennyy-sintaksis/#markdown-task-lists" target="_blank">Списки задач</a></td>
+          <td class="green lighten-4">Да</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/rasshirennyy-sintaksis/#emojis-copy-and-paste" target="_blank">Emoji (скопировать и вставить)</a></td>
+          <td class="green lighten-4">Да</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/rasshirennyy-sintaksis/#emojis-access-code" target="_blank">Emoji (коды доступа)</a></td>
+          <td class="green lighten-4">Да</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/rasshirennyy-sintaksis/#markdown-auto-link" target="_blank">автоматический Link от URL</a></td>
+          <td class="green lighten-4">Да</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/rasshirennyy-sintaksis/#markdown-disable-auto-link" target="_blank">Отключить автоматический link URL</a></td>
+          <td class="green lighten-4">Да</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/bazovyy-sintaksis/#html" target="_blank">HTML</a></td>
+          <td class="yellow lighten-3">Частичное</td>
+          <td>В редакторе Bear HTML не отображается, но после экспорта отображается правильно.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="additional-elements">Поддержка дополнительных элементов синтаксиса</h2>
+
+    <p>Некоторые не очень распространенные элементы Markdown также являются частью диапазона опций Bear, см. <a href="#table-1-2">Таблица 1.2</a>.</p>
+
+    <table class="responsive-table" id="table-1-2">
+      <thead>
+        <tr>
+          <th>Элемент</th>
+          <th>Markdown</th>
+          <th>Выход</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Выделять</td>
+          <td><code>::слово или фраза::</code></td>
+          <td><mark>слово или фраза</mark></td>
+        </tr>
+        <tr>
+          <td>Подчеркивание</td>
+          <td><code>~слово или фраза~</code></td>
+          <td><u>слово или фраза</u></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="see-also">Смотри тоже</h2>
+
+    <p><a href="https://bear.app/faq/Markup%20:%20Markdown/Markdown%20compatibility%20mode/" target="_blank">Режим совместимости Bear Markdown</a></p>
+  </div> <!-- Fim do conteúdo principal -->
+
+</div>
+            <div class="col-12">
+  <ul class="collapsible">
+    <li class="active">
+      <div class="collapsible-header grey lighten-4"><i class="material-icons">share</i>доля</div>
+      <div class="collapsible-body">
+        <div class="collection">
+          <a href="#!" class="collection-item" data-sharer="twitter" data-title="Bear® & Markdown™ - Полный справочник | Markdown" data-hashtags="markdown" data-url="https://ru.markdown.net.br/programmnogo-obespecheniya/bear/">
+            <i class="fab fa-twitter color-twitter"></i>&nbsp;&nbsp;Поделиться в Твиттере
+          </a>
+          <a href="#!" class="collection-item" data-sharer="facebook" data-hashtag="markdown" data-url="https://ru.markdown.net.br/programmnogo-obespecheniya/bear/">
+            <i class="fab fa-facebook color-facebook"></i>&nbsp;&nbsp;Поделиться через фейсбук
+          </a>
+          <a href="#!" class="collection-item" data-sharer="linkedin" data-url="https://ru.markdown.net.br/programmnogo-obespecheniya/bear/">
+            <i class="fab fa-linkedin color-linkedin"></i>&nbsp;&nbsp;Поделиться в Linkedin
+          </a>
+          <a href="#!" class="collection-item" data-sharer="email" data-title="Bear® & Markdown™ - Полный справочник | Markdown" data-url="https://ru.markdown.net.br/programmnogo-obespecheniya/bear/" data-subject="Здравствуй! Хорошо? Мне очень легко следовать этому руководству по Markdown, посмотрите, когда сможете. Надеюсь, это будет полезно, увидимся позже." data-to="email@host.com">
+            <i class="fas fa-envelope color-email"></i>&nbsp;&nbsp;Поделиться по электронной почте
+          </a>
+          <a href="#!" class="collection-item" data-sharer="whatsapp" data-title="Bear® & Markdown™ - Полный справочник | Markdown" data-url="https://ru.markdown.net.br/programmnogo-obespecheniya/bear/">
+            <i class="fab fa-whatsapp color-whatsapp"></i>&nbsp;&nbsp;Поделиться через WhatsApp
+          </a>
+          <a href="#!" class="collection-item" data-sharer="telegram" data-title="Bear® & Markdown™ - Полный справочник | Markdown" data-url="https://ru.markdown.net.br/programmnogo-obespecheniya/bear/" data-to="(00) 99999-9999">
+            <i class="fab fa-telegram color-telegram"></i>&nbsp;&nbsp;Поделиться в Telegram
+          </a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+          </div>
+          <!-- Table of contents -->
+          <div class="col hide-on-small-only m3 xl3 offset-xl1">
+            <div class="toc-wrapper" id="sticky-navigator">
+            </div>
+          </div>
+          <!-- Table of contents -->
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer docs-footer">
+  <div class="container">
+    <div class="row" style="margin-bottom: 0;">
+      <div class="col s12 m10 offset-m1">
+        <div class="row">
+          <div class="col l4 s12" style="overflow: hidden;">
+            <a href="https://twitter.com/CodigoNetwork" class="twitter-follow-button" data-show-count="true" data-size="large" data-dnt="true">следить @CodigoNetwork</a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div>
+            &copy;&nbsp;<noscript>2020</noscript><script type="text/javascript">document.write(new Date().getFullYear());</script> <strong>Markdown</strong>, Все права защищены.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    <!--  Scripts-->
+    <script src="/assets/js/bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-invisibles/prism-show-invisibles.min.js" integrity="sha256-1baFoczEXwdtWBiZ6gbu7W1kn6XfPgKY4LkQQYNHTkM=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-asciidoc.min.js" integrity="sha256-Z6qgXS53J00CrN9qHl3CxGqX2A3qs6HwGi96bnk2e4w=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-markdown.min.js" integrity="sha256-LVbOCHxYsNr9pF5KGdB2NphtO2FKM92SGFxRkWc9Ovg=" crossorigin="anonymous"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.youtube.min.js"></script>
+    <script src="/assets/js/vendor/jquery.lazy@1.7.9/jquery.lazy.picture.min.js"></script>
+    <!-- Lightbox das imagens -->
+    <script>
+      $(document).ready(function(){
+         $('.materialboxed').materialbox();
+
+         $('picture.lazy-img.unloaded, img.lazy-img, iframe.lazy-yt.unloaded').Lazy({
+             effect: 'fadeIn',
+             effectTime: 1000
+             // called after an element was successfully handled
+             // afterLoad: function(element) {
+             // // Remove a animação do loader da imagem
+             //     // element.height(element.closest('.img-lazy-container').find('.image-placeholder').height());
+
+             //     element.removeClass('unloaded');
+             // }
+         });
+       });
+      anchors.add("h2, h3, h5");
+      $('#sticky-navigator').stickyNavigator();
+    </script>
+    <!-- Twitter Button -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </body>
+</html>
